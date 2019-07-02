@@ -1,0 +1,39 @@
+#latest {
+  max-width: 1080px;
+  margin: auto;
+  padding-top: 5%;
+  overflow-y: scroll;
+  max-height: 90%;
+
+  .blog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .list-item {
+      margin-bottom: 40px;
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,.75);
+
+      img {
+        display: block;
+      }
+
+      .info {
+        min-height: 100px;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px 15px;
+
+        h2 {
+          color: @faded_white;
+          margin-bottom: 10px;
+        }
+
+        p {
+          color: @JPS_gold;
+          font-family: sans-serif;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
