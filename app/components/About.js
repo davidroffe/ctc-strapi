@@ -99,8 +99,9 @@ class About extends React.Component {
           <span>
             CTC (Classic Team Championship) is a competition that runs on top of
             the official Lotus 79 iRacing series. It aims to recreate races from
-            the late 70's and early 80's. For that every participant runs
-            official race paints from the era, provided by the CTC community.
+            the late 70&apos;s and early 80&apos;s. For that every participant
+            runs official race paints from the era, provided by the CTC
+            community.
           </span>
         </p>
         <p>
@@ -119,7 +120,7 @@ class About extends React.Component {
         </p>
         <p>
           <span>
-            The Championship is decided on the official series, we'll just
+            The Championship is decided on the official series, we&apos;ll just
             dempand good sportsmanship and that you race with the official CTC
             pain that we provide you. In return we will help you with setups and
             unveil the secrets the Lotus 79.
@@ -128,7 +129,7 @@ class About extends React.Component {
         <p>
           <span>
             Have fun and see you on the tracks once you understand the Lotus 79
-            and become part of this community you'll never look back
+            and become part of this community you&apos;ll never look back
           </span>
         </p>
       </section>
