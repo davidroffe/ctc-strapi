@@ -1,8 +1,11 @@
-@import "./reset.less";
-@import "./type.less";
+@import './reset.less';
+@import './type.less';
 
 /* React wrapping root element children in div */
-html, body, #root, #root > div {
+html,
+body,
+#root,
+#root > div {
   height: 100%;
 }
 
@@ -42,5 +45,16 @@ html, body, #root, #root > div {
         border-bottom-color: @JPS_gold;
       }
     }
+  }
+}
+
+//App Views
+h1 {
+  color: @faded_white;
+  margin: 0 auto 50px;
+
+  span {
+    padding: 0 15px;
+    border-right: 1px solid @faded_white;
   }
 }

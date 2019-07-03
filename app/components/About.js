@@ -96,41 +96,20 @@ class About extends React.Component {
           <span>About</span>
         </h1>
         <p>
-          <span>
-            CTC (Classic Team Championship) is a competition that runs on top of
-            the official Lotus 79 iRacing series. It aims to recreate races from
-            the late 70&apos;s and early 80&apos;s. For that every participant
-            runs official race paints from the era, provided by the CTC
-            community.
-          </span>
-        </p>
-        <p>
-          <span>
-            Newcomers will be assigned to Aurora teams and are invited to fight
-            for a promotion to a championship team. Your participation in the
-            official iRacing series and good results in the races will trigger
-            the promotion
-          </span>
-        </p>
-        <p>
-          <span>
-            CTC is not a league nor a restricted group, just a group of guys
-            taking the most from the series
-          </span>
-        </p>
-        <p>
-          <span>
-            The Championship is decided on the official series, we&apos;ll just
-            dempand good sportsmanship and that you race with the official CTC
-            pain that we provide you. In return we will help you with setups and
-            unveil the secrets the Lotus 79.
-          </span>
-        </p>
-        <p>
-          <span>
-            Have fun and see you on the tracks once you understand the Lotus 79
-            and become part of this community you&apos;ll never look back
-          </span>
+          CTC (Classic Team Championship) is a competition that runs on top of
+          the official Lotus 79 iRacing series. It aims to recreate races from
+          the late 70&apos;s and early 80&apos;s. For that every participant
+          runs official race paints from the era, provided by the CTC community.
+          Newcomers will be assigned to Aurora teams and are invited to fight
+          for a promotion to a championship team. Your participation in the
+          official iRacing series and good results in the races will trigger the
+          promotion. CTC is not a league nor a restricted group, just a group of
+          guys taking the most from the series. The Championship is decided on
+          the official series, we&apos;ll just dempand good sportsmanship and
+          that you race with the official CTC pain that we provide you. In
+          return we will help you with setups and unveil the secrets the Lotus
+          79. Have fun and see you on the tracks once you understand the Lotus
+          79 and become part of this community you&apos;ll never look back.
         </p>
       </section>
     );

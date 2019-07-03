@@ -1,16 +1,16 @@
-import React from "react";
-import superagent from "superagent";
-import placeHolderImage from "../assets/images/blog_image_placeholder.png";
+import React from 'react';
+import superagent from 'superagent';
+import placeHolderImage from '../assets/images/blog_image_placeholder.png';
 
 class Latest extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      form: "login",
-      email: "",
-      password: "",
-      passwordConfirm: "",
+      form: 'login',
+      email: '',
+      password: '',
+      passwordConfirm: '',
       errorMessage: []
     };
 
@@ -35,20 +35,20 @@ class Latest extends React.Component {
     let password = this.state.password;
     let passwordConfirm = this.state.passwordConfirm;
     let splashClass = this;
-    const url = form === "login" ? "/api/login" : "/api/signup";
+    const url = form === 'login' ? '/api/login' : '/api/signup';
 
-    if (email === undefined || email === "") {
-      errorMessage.push("Please enter an email.");
+    if (email === undefined || email === '') {
+      errorMessage.push('Please enter an email.');
     }
-    if (password === undefined || password === "") {
-      errorMessage.push("Please enter a password.");
+    if (password === undefined || password === '') {
+      errorMessage.push('Please enter a password.');
     }
-    if (form === "signUp") {
+    if (form === 'signUp') {
       if (password !== passwordConfirm) {
-        errorMessage.push("Passwords do not match.");
+        errorMessage.push('Passwords do not match.');
       }
       if (password.length < 8) {
-        errorMessage.push("Password must be at least 8 characters.");
+        errorMessage.push('Password must be at least 8 characters.');
       }
     }
     if (errorMessage.length > 0) {
@@ -62,7 +62,7 @@ class Latest extends React.Component {
           password: password
         })
         .then(response => {
-          splashClass.props.history.push("/panel/cars");
+          splashClass.props.history.push('/panel/cars');
         })
         .catch(error => {
           errorMessage = [error.message];
@@ -72,7 +72,7 @@ class Latest extends React.Component {
   handleSwitchForm(e) {
     e.preventDefault();
 
-    let form = this.state.form === "login" ? "signUp" : "login";
+    let form = this.state.form === 'login' ? 'signUp' : 'login';
 
     this.setState({
       form
@@ -81,33 +81,56 @@ class Latest extends React.Component {
   render() {
     return (
       <section id="latest">
-        <ul class="blog-list">
-          <li class="list-item">
+        <h1>
+          <span>Latest</span>
+        </h1>
+        <ul className="blog-list">
+          <li className="list-item">
             <img src={placeHolderImage} alt="Blog post placeholder image" />
-            <div class="info">
+            <div className="info">
               <h2>Blog Post Title</h2>
-              <p>Blog post blurb</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.{' '}
+              </p>
             </div>
           </li>
-          <li class="list-item">
+          <li className="list-item">
             <img src={placeHolderImage} alt="Blog post placeholder image" />
-            <div class="info">
+            <div className="info">
               <h2>Blog Post Title</h2>
-              <p>Blog post blurb</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.{' '}
+              </p>
             </div>
           </li>
-          <li class="list-item">
+          <li className="list-item">
             <img src={placeHolderImage} alt="Blog post placeholder image" />
-            <div class="info">
+            <div className="info">
               <h2>Blog Post Title</h2>
-              <p>Blog post blurb</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.{' '}
+              </p>
             </div>
           </li>
-          <li class="list-item">
+          <li className="list-item">
             <img src={placeHolderImage} alt="Blog post placeholder image" />
-            <div class="info">
+            <div className="info">
               <h2>Blog Post Title</h2>
-              <p>Blog post blurb</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.{' '}
+              </p>
             </div>
           </li>
         </ul>

@@ -1,15 +1,15 @@
-import React from "react";
-import superagent from "superagent";
+import React from 'react';
+import superagent from 'superagent';
 
 class Guide extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      form: "login",
-      email: "",
-      password: "",
-      passwordConfirm: "",
+      form: 'login',
+      email: '',
+      password: '',
+      passwordConfirm: '',
       errorMessage: []
     };
 
@@ -34,20 +34,20 @@ class Guide extends React.Component {
     let password = this.state.password;
     let passwordConfirm = this.state.passwordConfirm;
     let splashClass = this;
-    const url = form === "login" ? "/api/login" : "/api/signup";
+    const url = form === 'login' ? '/api/login' : '/api/signup';
 
-    if (email === undefined || email === "") {
-      errorMessage.push("Please enter an email.");
+    if (email === undefined || email === '') {
+      errorMessage.push('Please enter an email.');
     }
-    if (password === undefined || password === "") {
-      errorMessage.push("Please enter a password.");
+    if (password === undefined || password === '') {
+      errorMessage.push('Please enter a password.');
     }
-    if (form === "signUp") {
+    if (form === 'signUp') {
       if (password !== passwordConfirm) {
-        errorMessage.push("Passwords do not match.");
+        errorMessage.push('Passwords do not match.');
       }
       if (password.length < 8) {
-        errorMessage.push("Password must be at least 8 characters.");
+        errorMessage.push('Password must be at least 8 characters.');
       }
     }
     if (errorMessage.length > 0) {
@@ -61,7 +61,7 @@ class Guide extends React.Component {
           password: password
         })
         .then(response => {
-          splashClass.props.history.push("/panel/cars");
+          splashClass.props.history.push('/panel/cars');
         })
         .catch(error => {
           errorMessage = [error.message];
@@ -71,7 +71,7 @@ class Guide extends React.Component {
   handleSwitchForm(e) {
     e.preventDefault();
 
-    let form = this.state.form === "login" ? "signUp" : "login";
+    let form = this.state.form === 'login' ? 'signUp' : 'login';
 
     this.setState({
       form
@@ -80,12 +80,25 @@ class Guide extends React.Component {
   render() {
     return (
       <section id="guide">
-        <h1><span>Guide</span></h1>
-        <p><span>CTC (Classic Team Championship) is a competition that runs on top of the official Lotus 79 iRacing series. It aims to recreate races from the late 70's and early 80's. For that every participant runs official race paints from the era, provided by the CTC community.</span></p>
-        <p><span>Newcomers will be assigned to Aurora teams and are invited to fight for a promotion to a championship team. Your participation in the official iRacing series and good results in the races will trigger the promotion</span></p>
-        <p><span>CTC is not a league nor a restricted group, just a group of guys taking the most from the series</span></p>
-        <p><span>The Championship is decided on the official series, we'll just dempand good sportsmanship and that you race with the official CTC pain that we provide you. In return we will help you with setups and unveil the secrets the Lotus 79.</span></p>
-        <p><span>Have fun and see you on the tracks once you understand the Lotus 79 and become part of this community you'll never look back</span></p>
+        <h1>
+          <span>Guide</span>
+        </h1>
+        <p>
+          CTC (Classic Team Championship) is a competition that runs on top of
+          the official Lotus 79 iRacing series. It aims to recreate races from
+          the late 70&apos;s and early 80&apos;s. For that every participant
+          runs official race paints from the era, provided by the CTC community.
+          Newcomers will be assigned to Aurora teams and are invited to fight
+          for a promotion to a championship team. Your participation in the
+          official iRacing series and good results in the races will trigger the
+          promotion. CTC is not a league nor a restricted group, just a group of
+          guys taking the most from the series. The Championship is decided on
+          the official series, we&apos;ll just dempand good sportsmanship and
+          that you race with the official CTC pain that we provide you. In
+          return we will help you with setups and unveil the secrets the Lotus
+          79. Have fun and see you on the tracks once you understand the Lotus
+          79 and become part of this community you&apos;ll never look back.
+        </p>
       </section>
     );
   }
